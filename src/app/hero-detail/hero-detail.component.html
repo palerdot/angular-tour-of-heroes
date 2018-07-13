@@ -3,6 +3,6 @@
 		Selected Hero:
   </label>
   <!-- <strong>{{hero?.name | uppercase}}</strong> -->
-  <input [(ngModel)]="hero.name" placeholder="name ..." />
+  <input *ngIf="hero" [(ngModel)]="hero.name" placeholder="name ..." />
   <button (click)="save()">save</button>
 </div>
