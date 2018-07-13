@@ -2,5 +2,7 @@
 	<label>
 		Selected Hero:
   </label>
-  <strong>{{hero?.name | uppercase}}</strong>
+  <!-- <strong>{{hero?.name | uppercase}}</strong> -->
+  <input [(ngModel)]="hero.name" placeholder="name ..." />
+  <button (click)="save()">save</button>
 </div>
