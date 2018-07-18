@@ -17,7 +17,16 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'add-hero', component: AddNewHeroComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
-  { path: 'dynamic-form', component: DynamicFormsComponent }
+  { path: 'dynamic-form', component: DynamicFormsComponent },
+  // feature module
+  {
+    path: 'customers',
+    loadChildren: './customers/customers.module#CustomersModule'
+  },
+  {
+    path: 'orders',
+    loadChildren: './orders/orders.module#OrdersModule'
+  }
 ];
 
 @NgModule({
