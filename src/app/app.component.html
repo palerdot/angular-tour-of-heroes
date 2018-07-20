@@ -9,30 +9,36 @@
     <a routerLink="/">Home</a>
   </nav>
   <nav>
-      <a routerLink="/dashboard">Dashboard</a>
-    </nav>
-  <nav>
-    <a routerLink="/heroes">Heroes</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
   </nav>
   <nav>
-    <a routerLink="/add-hero">Add Hero!</a>
+    <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+    <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact Crisis Center</a>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
   </nav>
   <nav>
-    <a routerLink="/reactive-form">Reactive Form</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
   <nav>
-    <a routerLink="/dynamic-form">Dynamic Forms</a>
+    <a routerLink="/add-hero" routerLinkActive="active">Add Hero!</a>
+  </nav>
+  <nav>
+    <a routerLink="/reactive-form" routerLinkActive="active">Reactive Form</a>
+  </nav>
+  <nav>
+    <a routerLink="/dynamic-form" routerLinkActive="active">Dynamic Forms</a>
   </nav>
   <hr>
   <div>
-    <button routerLink="/customers">Customers</button>
-    <button routerLink="/orders">Orders</button>
+    <button class="btn btn-default" routerLink="/customers" routerLinkActive="btn-primary">Customers</button>
+    <button class="btn btn-default" routerLink="/orders" routerLinkActive="btn-primary">Orders</button>
   </div>
   <hr>
 </div>
 <div>
   <!-- <app-heroes></app-heroes> -->
   <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
 </div>
 <div>
   <app-messages></app-messages>
